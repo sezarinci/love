@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benim Kişisel Web Sayfam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #takipciButon {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            padding: 10px 20px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: top 0.1s linear, left 0.1s linear;
+        }
+
+        #evetButonu {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-left: 100px; /* Butonu sağa kaydırır */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ACABA BERFU BENİ SEVİYOR MU?</h1>
+        <p>HADİ ONA BİR SEÇİM HAKKI VERELİM</p>
+    </header>
+
+    <section>
+        <h2>YUSUFU SEVİYOR MUSUN =</h2>
+        <p>(O SENİ SEVERDİ)</p>
+        <button id="evetButonu">EVET</button>
+    </section>
+
+    <button id="takipciButon">TABİKİDE HAYIR</button>
+
+    <footer>
+        <p>GÖRÜNEN KOY KLAVUZ İSTEMEZ.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("mousemove", function(event) {
+            let buton = document.getElementById("takipciButon");
+            let x = event.clientX;
+            let y = event.clientY;
+
+            buton.style.left = (x - 50) + "px";
+            buton.style.top = (y - 20) + "px";
+        });
+
+        document.getElementById("evetButonu").addEventListener("click", function() {
+            alert("Oley! Yusuf çok mutlu oldu! 🎉");
+        });
+    </script>
+
+</body>
+</html>
